@@ -11,9 +11,13 @@
 
 #container{
   background-color: white;
+  margin-top:36px;
 }
 
 #top_logo{
+  position: relative;
+  top: -20px;
+  left: 117px;
   background-color: #f1f1f2;
   width: 167px;
   height: 160px;
