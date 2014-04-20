@@ -1,3 +1,20 @@
 // Place all the styles related to the Page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#background{
+  border: 0px black solid;
+  position: absolute;
+  z-index: -1;
+  left: 0px;
+  top: 0px;
+}
+
+#container{
+  background-color: white;
+}
+
+#top_logo{
+  background-color: #f1f1f2;
+  width: 150px;
+  height: 200px;
+}
