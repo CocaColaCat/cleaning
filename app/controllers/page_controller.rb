@@ -10,4 +10,9 @@ class PageController < ApplicationController
 
   def contact
   end
+
+  def enquiry
+    
+  end
+
 end

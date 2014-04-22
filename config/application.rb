@@ -1,11 +1,11 @@
 require File.expand_path('../boot', __FILE__)
 
-#require 'rails/all'
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "active_resource/railtie"
-require "rails/test_unit/railtie"
-require "sprockets/railtie"
+require 'rails/all'
+#require "action_controller/railtie"
+#require "action_mailer/railtie"
+#require "active_resource/railtie"
+#require "rails/test_unit/railtie"
+#require "sprockets/railtie"
 
 if defined?(Bundler)
   Bundler.require(*Rails.groups(:assets => %w(development test)))
@@ -20,5 +20,10 @@ module Cleaning
     config.assets.enabled = true
 
     config.assets.version = '1.0'
+
+    config.generators do |g|
+      g.orm :active_record
+      g.test_framework :test_unit
+    end
   end
 end

@@ -1,0 +1,17 @@
+
+<h1>Enquiry#new</h1>
+<% if flash[:notice] %>
+  <p class='notice'><%=h flash[:notice] %></p>
+<% end %>
+<p>Find me in app/views/enquiry/new.html.erb</p>
+
+<%= form_for @enquiry, url: {action: "create"} do |f| %>
+   <%= f.text_field :name %>
+   <%= f.text_field :contact_number %>
+   <%= f.text_field :email %>
+   <%= f.text_field :location %>
+   <%= f.text_field :service %>
+   <%= f.text_field :date %>
+   <%= f.text_area :details %>
+   <%= f.submit "Submit" %>
+<% end %>
