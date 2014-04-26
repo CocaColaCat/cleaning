@@ -6,7 +6,7 @@ Cleaning::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.active_support.deprecation = :log
 
@@ -17,11 +17,14 @@ Cleaning::Application.configure do
   config.assets.debug = true
   
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_setting = {
-    address: "smtp.gamil.com",
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
     port: 587,
-    user_name: "jianping.zhou.1986@gmail.com",
-    password: ""
+    domain: "gmail.com", 
+    user_name: "",
+    password: "",
+    authentication: "plain", 
+    enable_starrrls_auto: true
   }
 
 end

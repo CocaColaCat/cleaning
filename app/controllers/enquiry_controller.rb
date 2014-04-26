@@ -11,7 +11,7 @@ class EnquiryController < ApplicationController
     @enquiry = Enquiry.new(params[:enquiry])
     respond_to do |format|
       if @enquiry.save
-	
+        EnquiryNotifier.sent(@enquiry).deliver	
 	format.html { redirect_to action: "new" , notice: "enquiry was created successfully." }
       end
     end
