@@ -5,13 +5,25 @@
 <% end %>
 <p>Find me in app/views/enquiry/new.html.erb</p>
 
+<% if @enquiry.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@enquiry.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+    <ul>
+      <% @enquiry.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for @enquiry, url: {action: "create"} do |f| %>
-   <%= f.text_field :name %>
-   <%= f.text_field :contact_number %>
-   <%= f.text_field :email %>
-   <%= f.text_field :location %>
-   <%= f.text_field :service %>
-   <%= f.text_field :date %>
-   <%= f.text_area :details %>
-   <%= f.submit "Submit" %>
+  <%= f.text_field :name %>
+  <%= f.text_field :contact_number %>
+  <%= f.text_field :email %>
+  <%= f.text_field :location %>
+  <%= f.text_field :service %>
+  <%= f.text_field :date %>
+  <%= f.text_area :details %>
+  <%= f.submit "Submit" %>
 <% end %>

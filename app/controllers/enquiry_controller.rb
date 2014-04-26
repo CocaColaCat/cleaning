@@ -13,7 +13,10 @@ class EnquiryController < ApplicationController
       if @enquiry.save
         EnquiryNotifier.sent(@enquiry).deliver	
 	format.html { redirect_to action: "new" , notice: "enquiry was created successfully." }
+      else
+        format.html { render action: "new" }
       end
+    
     end
   end
 end
