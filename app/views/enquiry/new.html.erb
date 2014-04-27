@@ -1,9 +1,7 @@
 
-<h1>Enquiry#new</h1>
 <% if flash[:notice] %>
   <p class='notice'><%=h flash[:notice] %></p>
 <% end %>
-<p>Find me in app/views/enquiry/new.html.erb</p>
 
 <% if @enquiry.errors.any? %>
   <div id="error_explanation">
@@ -16,14 +14,27 @@
     </ul>
   </div>
 <% end %>
-
-<%= form_for @enquiry, url: {action: "create"} do |f| %>
-  <%= f.text_field :name %>
-  <%= f.text_field :contact_number %>
-  <%= f.text_field :email %>
-  <%= f.text_field :location %>
-  <%= f.text_field :service %>
-  <%= f.text_field :date %>
-  <%= f.text_area :details %>
-  <%= f.submit "Submit" %>
-<% end %>
+<div class="grid_4">
+  <%= form_for @enquiry, url: {action: "create"} do |f| %>
+    <%= f.text_field :name, placeholder: 'Your Name' %>
+    <%= f.text_field :contact_number, placeholder: 'Your Contact Number'%>
+    <%= f.text_field :email, placeholder: 'Your Email' %>
+    <%= f.text_field :location, placeholder: 'Your Location' %>
+    <%= f.collection_select :service, Enquiry::SERVICES, :to_s, :to_s, prompt: 'Select Service' %>
+    <div class="input-group date">
+      <%= f.text_field :date, :class => 'form-control' %>
+    <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+  </div>
+    <%= f.text_area :details, placeholder: 'Enter details of your job here...' %>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>
+<script type="text/javascript">
+  $('.input-group.date').datepicker({
+          keyboardNavigation: false,
+	      forceParse: false,
+	          calendarWeeks: true,
+		      autoclose: true,
+		          todayHighlight: true
+			  });
+</script>
