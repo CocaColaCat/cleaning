@@ -1,3 +1,35 @@
 // Place all the styles related to the enquiry controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#enquiry_form{
+  background-color:#f2f2f2;
+  border-top: 3px #55a0cc solid;
+  border-bottom-left-radius: 3px;
+  -moz-border-bottom-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -moz-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  
+  #form_intro, form{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 270px;
+  }
+
+  #form_intro {
+    h4{
+     text-align: center;
+     span{
+       font-size: 26px;
+       color: #F15A2A;
+      }
+    }
+  }
+  
+  .btn{
+  float: right;  
+}
+}
