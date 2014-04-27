@@ -3,10 +3,10 @@
 one:
   name: MyString
   contact_number: 1
-  email: MyString
+  email: MyString@g.com
   location: MyString
   service: MyString
-  date: 2014-04-22
+  date: 20/10/2014
   details: MyText
 
 two:

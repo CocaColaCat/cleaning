@@ -3,17 +3,6 @@
   <p class='notice'><%=h flash[:notice] %></p>
 <% end %>
 
-<% if @enquiry.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@enquiry.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-    <ul>
-      <% @enquiry.errors.full_messages.each do |msg| %>
-	<li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
 <div class="grid_4" id = "enquiry_form">
   <div id="form_intro">
     <h4>Get Your <span>Free</span> Quote</h4>
@@ -24,31 +13,38 @@
     <div class="form-group">
       <%= f.label 'Your Name*' %>
       <%= f.text_field :name, placeholder: 'Your Name', :class => 'form-control' %>
+      <%= error_message_for(:name) %>
     </div>
     <div class="form-group"> 
       <%= f.label 'Your Contact Number*' %>
       <%= f.text_field :contact_number, placeholder: 'Your Contact Number', :class => 'form-control'%>
+      <%= error_message_for(:contact_number) %>
     </div>
     <div class="form-group">
       <%= f.label 'Your Email' %>
       <%= f.text_field :email, placeholder: 'Your Email', :class => 'form-control' %>
+      <%= error_message_for(:email) %>
     </div>
     <div class="form-group">
       <%= f.label 'Your Location*' %>
       <%= f.text_field :location, placeholder: 'Your Location', :class => 'form-control' %>
+     <%= error_message_for(:location) %>
     </div>
     <div class="form-group">
       <%= f.label 'Pick your service*' %>
       <%= f.collection_select :service, Enquiry::SERVICES, :to_s, :to_s, {prompt: 'Select Service'}, {:class => 'form-control'} %>
+      <%= error_message_for(:service) %>
     </div>
     <%= f.label 'Pick a date for your service*' %>
     <div class="input-group date form-group">
       <%= f.text_field :date, :class => 'form-control', placeholder: 'pick a date for your service' %>
       <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
     </div>
+    <%= error_message_for(:date) %>
     <div class="form-group">
       <%= f.label 'Outline your cleaning job:' %>
       <%= f.text_area :details, placeholder: 'Enter details of your job here...', :class => 'form-control', :rows => '4' %>
+      <%= error_message_for(:details) %>
     </div>
     <%= f.submit "Submit", :class => "btn btn-warning"%>
   <% end %>
