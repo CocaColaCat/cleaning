@@ -12,9 +12,10 @@ class EnquiryController < ApplicationController
     respond_to do |format|
       if @enquiry.save
         #EnquiryNotifier.sent(@enquiry).deliver	
-	format.html { redirect_to action: "new" , notice: "enquiry was created successfully." }
+	format.html { redirect_to '/page/home' , notice: "enquiry was created successfully." }
       else
-        format.html { render action: "new" }
+        session[:enquiry] = params[:enquiry]
+	format.html { redirect_to :back, :notice => "something went wrong.try again" }
       end
     
     end
