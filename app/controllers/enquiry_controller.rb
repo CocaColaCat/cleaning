@@ -15,7 +15,7 @@ class EnquiryController < ApplicationController
 	format.html { redirect_to '/page/home' , notice: "enquiry was created successfully." }
       else
         session[:enquiry] = params[:enquiry]
-	format.html { redirect_to :back, :notice => "something went wrong.try again" }
+	format.html { redirect_to :back }
       end
     
     end
