@@ -1,0 +1,32 @@
+#service-boxes{
+  margin-top: 10px;
+}
+
+.service-box{
+  margin-top: 20px;
+  float:left;
+  margin-left:10px;
+  width: 300px; 
+  background-color: #f1f1f2;
+  border-top: 3px solid #F15A2A;
+  border-bottom-left-radius: 3px;
+  -moz-border-bottom-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -moz-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  img{
+    margin-left: 40px;
+    margin-top: 10px;
+    width: 220px; 
+}  
+.service-name{
+  margin-bottom: 0px;
+  padding-top: 10px;
+  font-size:18px;
+  text-align:center;
+ }
+ .service-brife{
+   text-align: center;
+ }
+}

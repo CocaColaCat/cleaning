@@ -1,37 +1,54 @@
 <div class="grid_12">
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				<ol class="carousel-indicators">
-					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-				</ol>
-		
-				<div class="carousel-inner">
-					<div class="item active">
-						<%= image_tag "Office-Cleaning-web.jpg" %>
-						<div class="carousel-caption">
-							<h3>First Label</h3>
-							any thing can be put here to describe the image.</div>
-					</div>
-					<div class="item">
-						<%= image_tag "Office-Cleaning-web.jpg" %>
-						<div class="carousel-caption">
-							<h3>Second Label</h3>
-							<p>any thing can be put here to describe the image.</p>
-						</div>
-					</div>
-					<div class="item">
-						<%= image_tag "Office-Cleaning-web.jpg" %>
-						<div class="carousel-caption">any thing can be put here to describe the image.</div>
-					</div>
-				</div>
-		
-				<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left"></span>
-				</a>
-				<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right"></span>
-				</a>
-			</div>
-		</div>
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="item active">
+	<%= image_tag "Office-Cleaning-web.jpg" %>
+	<div class="carousel-caption">
+	  <h3>First Label</h3>
+	  any thing can be put here to describe the image.</div>
+      </div>
+      <div class="item">
+	<%= image_tag "Office-Cleaning-web.jpg" %>
+	<div class="carousel-caption">
+	  <h3>Second Label</h3>
+	  <p>any thing can be put here to describe the image.</p>
+	</div>
+      </div>
+      <div class="item">
+	<%= image_tag "Office-Cleaning-web.jpg" %>
+	<div class="carousel-caption">any thing can be put here to describe the image.</div>
+      </div>
+    </div>
+
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+</div>
+<div class='grid_8' id='service-boxes'>
+  <div class='service-box'>
+    <%= image_tag('carpet-cleaning.jpg') %>
+    <p class='service-name'>Carpet Cleaning</p>
+    <p class='service-brife'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut ultricies tortor.</p>
+  </div>
+  <div class='service-box'>
+    <%= image_tag('office-cleaning.png') %>
+    <p class='service-name'>Office Cleaning</p>
+    <p class='service-brife'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut ultricies tortor.</p>
+  </div>
+  <div class='service-box'>
+    <%= image_tag('domestic_cleaning.jpg') %>
+    <p class='service-name'>Domestic Cleaning</p>
+    <p class='service-brife'>iLorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut ultricies tortor.</p>
+  </div>
+</div>
 <%= render 'enquiry/form' %>
