@@ -32,7 +32,7 @@
   text-decoration:none;
 }
 
-#menuh a:hover						/* menu on mouse-over  */
+#menuh a:hover, #menuh a.current						/* menu on mouse-over  */
 {
   color: white;
   background-color: #f47d21;

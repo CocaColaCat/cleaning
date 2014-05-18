@@ -18,10 +18,10 @@
       <div id="menuh-container">
 	<div id="menuh">
 	  <ul>
-	    <li><a href="#">Home</a></li>
+	    <li> <%= nav_link 'Home', root_path, false %></li>
 	  </ul>
 	  <ul>	
-	    <li><a href="#" class="top_parent">Services</a>
+	    <li><%= nav_link 'Services', "/page/services", true %>
 	    <ul>
 	      <li><a href="#" >Carpet Cleaning</a></li>
 	      <li><a href="#" >Office Cleaning</a></li>
@@ -31,10 +31,10 @@
 	    </li>
 	  </ul>
 	  <ul>
-	    <li><a href="#">About Us</a></li>
+	    <li><%= nav_link 'About Us', '/page/about', false %></li>
 	  </ul>
 	  <ul>
-	    <li><a href="#">Contact Us</a></li>
+	    <li><%= nav_link 'Contact Us', '/page/contact', false %></li>
 	  </ul>
 	</div>
       </div>
