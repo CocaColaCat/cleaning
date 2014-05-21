@@ -56,6 +56,10 @@
 
 #bottom-banner{
   background-color: #BDBDBD;
+  background-image: url(/assets/phone.png);
+  background-repeat: no-repeat;
+  background-position: 85% 50%;
+  background-size:60px 60px;
   width: 450px;
   margin-top:20px;
   margin-left:80px;
@@ -65,15 +69,21 @@
   -moz-box-shadow: 0 3px #777;
   -webkit-box-shadow:0 3px #777; 
   bor-shadow: 0 3px #777;
-  p:first-child{
-    color: white;
-    font-size: 16px;
-    padding-top: 10px;
-    margin-left: 50px; 
-}
-p:last-child{
-  font-size: 26px;
-  color: #F15A2A;
-}
-
+  #text{
+  	p:first-child{
+    		color: white;
+    		font-size: 16px;
+    		padding-top: 10px;
+    		padding-bottom: 0px;
+    		margin-left: 50px; 
+    		margin-bottom: 0px;
+		}
+	p:last-child{
+  		font-size: 26px;
+  		color: #F15A2A;
+  		font-weight:bold;
+  		margin-left: 50px;
+	}	
+}	
+	
 }
