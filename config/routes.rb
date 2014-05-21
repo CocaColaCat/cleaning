@@ -4,6 +4,8 @@ Cleaning::Application.routes.draw do
 
   post "enquiry/create"
 
+  get "enquiry/success"
+
   get "page/about"
 
   get "page/services"

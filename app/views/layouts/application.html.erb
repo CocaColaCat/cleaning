@@ -52,5 +52,10 @@
       <div><small>Copyright @ 2014</small></div>
     </div>
     <%= image_tag("background.jpg",  width: "100%", id: "background") %>
+    <script type="text/javascript">
+    	$(function(){
+	    $('#container').css({ 'min-height': $(window).innerHeight() });
+	    })
+    </script>
   </body>
 </html>

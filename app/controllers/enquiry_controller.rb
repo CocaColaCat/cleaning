@@ -12,12 +12,14 @@ class EnquiryController < ApplicationController
     respond_to do |format|
       if @enquiry.save
         #EnquiryNotifier.sent(@enquiry).deliver	
-	format.html { redirect_to '/page/home' , notice: "enquiry was created successfully." }
+	format.html { redirect_to '/enquiry/success' , notice: "enquiry was created successfully." }
       else
         session[:enquiry] = params[:enquiry]
 	format.html { redirect_to :back }
-      end
-    
+      end 
     end
+  end
+
+  def success
   end
 end
