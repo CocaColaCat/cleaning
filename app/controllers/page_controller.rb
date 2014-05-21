@@ -1,19 +1,13 @@
 class PageController < ApplicationController
   def home
-    if session[:enquiry]
-      @enquiry = Enquiry.new(session[:enquiry])
-      session[:enquiry] = nil
-      @enquiry.valid?
-    else
-      @enquiry = Enquiry.new
-    end
-
+    get_enquiry
   end
 
   def about
   end
 
   def services
+    get_enquiry
   end
 
   def contact
@@ -23,4 +17,14 @@ class PageController < ApplicationController
 
   end
 
+  private 
+  def get_enquiry
+    if session[:enquiry]
+      @enquiry = Enquiry.new(session[:enquiry])
+      session[:enquiry] = nil 
+      @enquiry.valid?
+    else
+      @enquiry = Enquiry.new
+    end
+  end
 end
