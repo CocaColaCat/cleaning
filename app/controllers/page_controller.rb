@@ -4,6 +4,7 @@ class PageController < ApplicationController
   end
 
   def about
+    get_enquiry
   end
 
   def services
@@ -17,11 +18,11 @@ class PageController < ApplicationController
 
   end
 
-  private 
+  private
   def get_enquiry
     if session[:enquiry]
       @enquiry = Enquiry.new(session[:enquiry])
-      session[:enquiry] = nil 
+      session[:enquiry] = nil
       @enquiry.valid?
     else
       @enquiry = Enquiry.new
